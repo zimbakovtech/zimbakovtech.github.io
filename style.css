@@ -337,7 +337,7 @@ h1 {
 }
 
 .kurs > div {
-    width: 70%;
+    width: 65%;
     margin-left: 2em;
 }
 
@@ -357,8 +357,8 @@ h1 {
     margin-right: 2em;
 }
 
-#glaven a {
-    width: 30%;
+.kurs > a {
+    width: 35%;
 }
 
 #glaven h1 {
@@ -371,7 +371,7 @@ h1 {
 }
 
 .lineargradient {
-    height: 1em;
+    height: 1.2em;
     width: 50%;
     background: #131e30;
     border-bottom-left-radius: 5px;
@@ -382,7 +382,7 @@ h1 {
 
 .lineargradient1 {
     width: 50%;
-    height: 1em;
+    height: 1.2em;
     background: #49566b;
     margin-left: 0;
     padding-left: 0;
@@ -459,12 +459,17 @@ h1 {
 .card1 {
     margin-top: 2em;
     border-radius: 10px;
+    padding: 0;
+    height: fit-content;
     border: 0.2em solid lightgrey;
+    margin-bottom: 2em;
 }
 
 .card1 img {
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    border-radius: 8px;
+    margin: 0;
 }
 
 #kontent p {
@@ -476,7 +481,8 @@ h1 {
 }
 
 .icon {
-    height: 12em;
+    width: 20%;
+    object-fit: contain;
 }
 
 #kontent > img {
