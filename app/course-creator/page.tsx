@@ -2,6 +2,8 @@ import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Image from "next/image";
+import TechBadge from "../../components/TechBadge";
+import { Reveal, RevealContainer } from "../../components/animation/Reveal";
 import { ArrowLeft, ExternalLink, BookOpen, Code2, Boxes } from "lucide-react";
 
 type Course = {
@@ -108,6 +110,7 @@ const courses: Course[] = [
 ];
 
 export default function CourseCreatorPage() {
+  const techStack = ["C++", "Python", "HTML", "CSS", "Java"];
   return (
     <main>
       <Header />
@@ -138,6 +141,19 @@ export default function CourseCreatorPage() {
             build real skills.
           </p>
         </div>
+
+        {/* Tech badges */}
+        <RevealContainer
+          as="div"
+          className="flex flex-wrap justify-center gap-3 mb-10"
+          stagger={0.05}
+        >
+          {techStack.map((tech) => (
+            <Reveal as="span" key={tech}>
+              <TechBadge name={tech} size="lg" />
+            </Reveal>
+          ))}
+        </RevealContainer>
         {/* Keep 9 rows layout */}
         <div className="grid gap-6">
           {courses.map((c, idx) => {

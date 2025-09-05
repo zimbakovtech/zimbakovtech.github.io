@@ -216,9 +216,9 @@ export default function Header() {
                 <Link
                   href="/Resume.pdf"
                   download
-                  className="ml-auto inline-flex items-center rounded-full bg-accent hover:bg-accent-hover text-bg px-3 py-1.5 text-sm font-medium transition-colors"
+                  className="ml-auto inline-flex items-center text-center rounded-full bg-accent hover:bg-accent-hover text-white px-3 py-1.5 text-sm font-medium transition-colors"
                 >
-                  Download CV
+                  Resume
                 </Link>
               </div>
             </motion.aside>
