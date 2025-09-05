@@ -27,7 +27,7 @@ export default function Hero() {
             immediate
             delay={0.05}
             as="p"
-            className="mt-6 sm:mt-8 mb-16 sm:mb-24 text-base sm:text-xl font-mono text-text-primary font-semibold uppercase"
+            className="mt-6 sm:mt-8 mb-16 sm:mb-24 text-xl lg:text-2xl font-mono text-text-primary font-semibold uppercase"
           >
             CS STUDENT | MOBILE APP DEVELOPER | ML ENTHUSIAST
           </Reveal>

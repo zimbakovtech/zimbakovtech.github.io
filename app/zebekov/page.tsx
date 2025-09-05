@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { Reveal, RevealContainer } from "../../components/animation/Reveal";
 import Image from "next/image";
+import TechBadge from "../../components/TechBadge";
 import {
   ArrowLeft,
   ExternalLink,
@@ -140,16 +141,12 @@ export default function ZebekovPage() {
         {/* Tech badges */}
         <RevealContainer
           as="div"
-          className="flex flex-wrap justify-center gap-2 mb-10"
-          stagger={0.04}
+          className="flex flex-wrap justify-center gap-3 mb-10"
+          stagger={0.05}
         >
           {techStack.map((tech) => (
-            <Reveal
-              as="span"
-              key={tech}
-              className="px-3 py-1 rounded-full text-xs font-mono bg-white/5 text-text-secondary"
-            >
-              {tech}
+            <Reveal as="span" key={tech}>
+              <TechBadge name={tech} size="lg" />
             </Reveal>
           ))}
         </RevealContainer>
