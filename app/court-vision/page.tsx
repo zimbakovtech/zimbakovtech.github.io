@@ -46,7 +46,7 @@ export default function CourtVisionPage() {
           </Link>
           <Reveal as="div">
             <Link
-              href="https://court-vision.mk/"
+              href="https://courtvision.tech/"
               target="_blank"
               className="underline inline-flex items-center gap-2"
             >
