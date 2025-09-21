@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     "Portfolio of Damjan Zimbakov - CS Student, Mobile App Developer, ML Enthusiast",
   icons: {
     icon: "/memoji.ico",
+    shortcut: "/memoji.ico",
+    apple: "/memoji.ico",
   },
   openGraph: {
     title: "Damjan Zimbakov - Portfolio",
