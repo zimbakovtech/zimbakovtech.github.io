@@ -21,7 +21,7 @@ export default function Hero() {
             immediate
             className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-semibold tracking-tight"
           >
-            DAMJAN ZIMBAKOV
+            Damjan Zimbakov
           </Reveal>
           <Reveal
             immediate

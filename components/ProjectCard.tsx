@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Calendar, User } from "lucide-react";
 import { Reveal } from "./animation/Reveal";
+import TechBadge from "./TechBadge";
 
 export type Project = {
   slug: string;
@@ -8,6 +10,9 @@ export type Project = {
   blurb: string;
   image: string;
   tech: string[];
+  year: number;
+  role: string;
+  categories: ("Web Apps" | "Mobile Apps" | "AI/ML")[];
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -29,18 +34,34 @@ export default function ProjectCard({ project }: { project: Project }) {
         <Reveal as="h3" className="text-lg font-semibold">
           {project.title}
         </Reveal>
-        <Reveal as="p" className="text-sm text-text-secondary mt-1">
+        {/* Meta row: year and role */}
+        <Reveal
+          as="div"
+          className="mt-1 flex items-center gap-4 text-xs text-text-secondary"
+        >
+          <span className="inline-flex items-center gap-1.5">
+            <Calendar className="h-3.5 w-3.5 opacity-80" />
+            <span>{project.year}</span>
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <User className="h-3.5 w-3.5 opacity-80" />
+            <span className="truncate max-w-[12rem]" title={project.role}>
+              {project.role}
+            </span>
+          </span>
+        </Reveal>
+        <Reveal as="p" className="text-sm text-text-secondary mt-2">
           {project.blurb}
         </Reveal>
         <div className="mt-3 flex flex-wrap gap-2">
-          {project.tech.map((t) => (
-            <span
-              key={t}
-              className="text-[10px] uppercase tracking-wide font-mono bg-white/5 text-text-secondary rounded-full px-2 py-0.5"
-            >
-              {t}
-            </span>
+          {project.tech.slice(0, 5).map((t) => (
+            <TechBadge key={t} name={t} size="sm" />
           ))}
+          {project.tech.length > 5 && (
+            <span className="inline-flex items-center rounded-full  px-2.5 py-1 text-xs shadow-sm bg-white/10 text-text-secondary">
+              +{project.tech.length - 5} more
+            </span>
+          )}
         </div>
       </div>
     </Link>
