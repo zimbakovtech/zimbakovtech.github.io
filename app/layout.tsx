@@ -9,18 +9,21 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://zimbakov.dev"),
   title: "Damjan Zimbakov - Portfolio",
   description:
     "Portfolio of Damjan Zimbakov - CS Student, Mobile App Developer, ML Enthusiast",
+  icons: {
+    icon: "/memoji.ico",
+  },
   openGraph: {
     title: "Damjan Zimbakov - Portfolio",
     description: "CS Student | Mobile App Developer | ML Enthusiast",
     type: "website",
-    url: "https://zimbakov.mk",
+    url: "https://zimbakov.dev",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og_image.png",
         width: 1200,
         height: 630,
         alt: "Damjan Zimbakov - Portfolio",
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Damjan Zimbakov — Portfolio",
     description: "CS Student | Mobile App Developer | ML Enthusiast",
-    images: ["/og-image.png"],
+    images: ["/og_image.png"],
   },
 };
 
