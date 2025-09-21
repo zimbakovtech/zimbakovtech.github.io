@@ -13,8 +13,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "zimbakovtech@gmail.com",
-      link: "mailto:zimbakovtech@gmail.com",
+      value: "damjan@zimbakov.dev",
+      link: "mailto:damjan@zimbakov.dev",
       color: "text-accent",
     },
     {
@@ -133,7 +133,7 @@ const Contact = () => {
 
               <Reveal
                 as="a"
-                href="mailto:zimbakovtech@gmail.com"
+                href="mailto:damjan@zimbakov.dev"
                 className="inline-flex items-center justify-center rounded-lg bg-accent hover:bg-accent-hover text-portfolio-bg font-semibold px-6 sm:px-8 py-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent/25"
               >
                 Send Me an Email

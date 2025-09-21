@@ -103,7 +103,7 @@ export default function Header() {
             <Reveal
               as="a"
               immediate
-              href="mailto:zimbakovtech@gmail.com"
+              href="mailto:damjan@zimbakov.dev"
               target="_blank"
               aria-label="Email"
               className="text-text-secondary hover:text-accent transition-colors"
@@ -207,7 +207,7 @@ export default function Header() {
                   <Instagram />
                 </Link>
                 <a
-                  href="mailto:zimbakovtech@gmail.com"
+                  href="mailto:damjan@zimbakov.dev"
                   aria-label="Email"
                   className="hover:text-accent"
                 >

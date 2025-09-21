@@ -16,7 +16,7 @@ export default function Footer() {
         </Reveal>
         <Reveal as="div" className="flex items-center gap-4">
           <a
-            href="mailto:zimbakovtech@gmail.com"
+            href="mailto:damjan@zimbakov.dev"
             aria-label="Email"
             className="hover:text-text-primary"
           >
