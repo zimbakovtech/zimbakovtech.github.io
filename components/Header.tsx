@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,19 +28,30 @@ export default function Header() {
     <>
       {/* Header */}
       <header
-        className={`fixed top-0 left-0 right-0 transition-all ${
-          scrolled ? "glass" : "bg-transparent"
-        } z-30`}
+        className={`fixed top-0 left-0 right-0 z-30 transition-[background-color,backdrop-filter,box-shadow,border-color] duration-300 ${
+          scrolled
+            ? "bg-surface/70 backdrop-blur-[10px] shadow-glass border-b border-white/10"
+            : "bg-transparent border-b border-transparent"
+        }`}
       >
         <div className="mx-auto container-max px-4 py-3 flex items-center justify-between">
           <Reveal as="div" immediate>
             <Link
               href="/#home"
-              className="text-2xl sm:text-3xl font-mono tracking-tight"
+              className="inline-flex items-center gap-2 tracking-tight"
+              aria-label="Home"
             >
-              <span className="text-accent">&lt;/</span>
-              <span className="text-text-primary">Zimbakov</span>
-              <span className="text-accent">&gt;</span>
+              <Image
+                src="/images/memoji.png"
+                alt="Memoji"
+                width={44}
+                height={44}
+                priority
+                className="block shrink-0"
+              />
+              <span className="text-2xl sm:text-3xl text-text-primary leading-none font-semibold relative translate-y-px">
+                Zimbakov
+              </span>
             </Link>
           </Reveal>
 
@@ -158,10 +170,23 @@ export default function Header() {
               className="fixed top-0 right-0 h-[100dvh] w-72 glass bg-surface/70 z-50 p-6 flex flex-col"
             >
               <div className="flex items-center justify-between">
-                <span className="text-lg font-semibold">
-                  <span className="text-accent">&lt;/</span>Zimbakov
-                  <span className="text-accent">&gt;</span>
-                </span>
+                <Link
+                  href="/#home"
+                  aria-label="Home"
+                  onClick={() => setOpen(false)}
+                  className="inline-flex items-center gap-2"
+                >
+                  <Image
+                    src="/images/memoji.png"
+                    alt="Memoji"
+                    width={40}
+                    height={40}
+                    className="block shrink-0"
+                  />
+                  <span className="text-lg font-semibold text-text-primary leading-none tracking-tight relative translate-y-px">
+                    Zimbakov
+                  </span>
+                </Link>
                 <button
                   aria-label="Close Menu"
                   className="w-10 h-10 rounded-md hover:bg-white/5 active:bg-white/10"
@@ -180,7 +205,7 @@ export default function Header() {
                     className="hover:text-accent"
                     onClick={() => setOpen(false)}
                   >
-                    {n.label}
+                    _{n.label}
                   </Link>
                 ))}
               </div>

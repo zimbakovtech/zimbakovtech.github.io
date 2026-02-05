@@ -43,10 +43,9 @@ const About = () => {
             as="p"
             className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed"
           >
-            I&apos;m a passionate Computer Science student and developer who
-            loves creating innovative solutions that make a real difference.
-            From mobile applications to AI-powered platforms, I enjoy exploring
-            the intersection of technology and user experience.
+            Computer Science student building production ML systems and cross-platform mobile apps. Experienced in shipping
+            E2E solutions. From data pipelines and model training to scalable APIs and Flutter mobile apps with 1,000+ users.
+            Proven ability to translate complex datasets into actionable insights through course creation.
           </Reveal>
         </RevealContainer>
 
