@@ -126,10 +126,10 @@ export default function Header() {
               <Link
                 href="/Resume.pdf"
                 target="_blank"
-                download
+                rel="noreferrer"
                 className="ml-2 inline-flex items-center rounded-full bg-accent hover:bg-accent-hover text-text-primary px-3 py-1.5 text-sm font-mono transition-colors"
               >
-                Download CV
+                View Resume
               </Link>
             </Reveal>
           </RevealContainer>
@@ -240,7 +240,8 @@ export default function Header() {
                 </a>
                 <Link
                   href="/Resume.pdf"
-                  download
+                  target="_blank"
+                  rel="noreferrer"
                   className="ml-auto inline-flex items-center text-center rounded-full bg-accent hover:bg-accent-hover text-white px-3 py-1.5 text-sm font-medium transition-colors"
                 >
                   Resume
