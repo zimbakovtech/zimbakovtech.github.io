@@ -6,6 +6,22 @@ import { useMemo, useState } from "react";
 
 const projects: Project[] = [
   {
+    slug: "hubby",
+    title: "Hubby eSIM",
+    blurb:
+      "Production Flutter eSIM app (iOS & Android) serving 500,000+ annual users across 23 locales, on a clean-architecture Firebase stack with Stripe payments.",
+    image: "/images/hubby/hubby.jpg",
+    tech: [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "Git",
+    ],
+    year: 2026,
+    role: "Lead Mobile Engineer",
+    categories: ["Mobile Apps"],
+  },
+  {
     slug: "nextime",
     title: "NexTime",
     blurb:
@@ -57,6 +73,25 @@ const projects: Project[] = [
     categories: ["AI/ML", "Web Apps"],
   },
   {
+    slug: "citybus",
+    title: "CityBus",
+    blurb:
+      "Full-stack public transit platform — a Flutter app over a FastAPI + PostgreSQL/PostGIS backend with route planning and real-time vehicle tracking.",
+    image: "/images/citybus/citybus.jpg",
+    tech: [
+      "Flutter",
+      "Dart",
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "Docker",
+      "Git",
+    ],
+    year: 2026,
+    role: "Full-Stack Developer",
+    categories: ["Mobile Apps", "Web Apps"],
+  },
+  {
     slug: "course-creator",
     title: "Course Creator - Coddy",
     blurb:
@@ -70,7 +105,7 @@ const projects: Project[] = [
 ];
 
 const categories = [
-  { id: "all", label: "All Projects", count: projects.length },
+  { id: "all", label: "All", count: projects.length },
   {
     id: "web",
     label: "Web Apps",
@@ -95,20 +130,20 @@ const categories = [
 ];
 
 export default function ProjectsGrid() {
-  const TABS = ["All Projects", "Web Apps", "Mobile Apps", "AI/ML"] as const;
+  const TABS = ["All", "Web Apps", "Mobile Apps", "AI/ML"] as const;
   type Tab = (typeof TABS)[number];
-  const [activeTab, setActiveTab] = useState<Tab>("All Projects");
+  const [activeTab, setActiveTab] = useState<Tab>("All");
 
   const filtered = useMemo(() => {
-    if (activeTab === "All Projects") return projects;
+    if (activeTab === "All") return projects;
     return projects.filter((p) =>
-      p.categories.includes(activeTab as Exclude<Tab, "All Projects">)
+      p.categories.includes(activeTab as Exclude<Tab, "All">)
     );
   }, [activeTab]);
 
   return (
     <section
-      id="projects"
+      id="experience"
       className="mx-auto container-max px-4 sm:px-6 md:px-8"
     >
       <RevealContainer as="div" className="text-center mb-8 sm:mb-10">
@@ -116,14 +151,14 @@ export default function ProjectsGrid() {
           as="h2"
           className="text-3xl sm:text-4xl md:text-5xl font-semibold"
         >
-          Featured <span className="text-accent">Projects</span>
+          Featured <span className="text-accent">Experience</span>
         </Reveal>
         <Reveal
           as="p"
           className="mt-3 text-text-secondary max-w-2xl mx-auto text-base sm:text-lg"
         >
-          A collection of projects that showcase my skills in mobile
-          development, web applications, AI, and educational content creation.
+          A collection of roles and projects spanning mobile engineering, full-stack
+          web platforms, AI/ML, and educational content.
         </Reveal>
       </RevealContainer>
       {/* Tabs */}

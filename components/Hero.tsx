@@ -55,10 +55,10 @@ export default function Hero() {
             className="mt-8 flex flex-wrap items-center justify-center gap-3"
           >
             <a
-              href="#projects"
+              href="#experience"
               className="inline-flex items-center justify-center rounded-full bg-accent hover:bg-accent-hover text-white px-5 py-2.5 text-sm sm:text-base font-mono transition-colors"
             >
-              Explore Projects
+              Explore Experience
             </a>
             <a
               href="#contact"
