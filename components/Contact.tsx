@@ -28,7 +28,7 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Damjan Zimbakov",
-      link: "https://linkedin.com/in/damjan-zimbakov-775077213/",
+      link: "https://www.linkedin.com/in/damjanzimbakov/",
       color: "text-blue-400",
     },
     {

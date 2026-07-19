@@ -30,7 +30,7 @@ export default function Footer() {
             <Github size={18} />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/damjan-zimbakov-775077213/"
+            href="https://www.linkedin.com/in/damjanzimbakov/"
             aria-label="LinkedIn"
             className="hover:text-text-primary"
           >

@@ -94,7 +94,7 @@ export default function Header() {
             </Reveal>
             <Reveal as="div" immediate>
               <Link
-                href="https://www.linkedin.com/in/damjan-zimbakov-775077213/"
+                href="https://www.linkedin.com/in/damjanzimbakov/"
                 aria-label="LinkedIn"
                 target="_blank"
                 className="text-text-secondary hover:text-accent transition-colors"
@@ -218,7 +218,7 @@ export default function Header() {
                   <Github />
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/in/damjan-zimbakov-775077213/"
+                  href="https://www.linkedin.com/in/damjanzimbakov/"
                   aria-label="LinkedIn"
                   className="hover:text-accent"
                 >
